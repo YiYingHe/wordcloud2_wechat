@@ -37,7 +37,7 @@ Reference: <https://github.com/Lchiffon/wordcloud2/issues/12>
 Get data and clean data
 =======================
 
-- Get data
+Get data
 ----------
 
 We only introduce the method of getting data from wechat(ios).
@@ -59,7 +59,7 @@ We only introduce the method of getting data from wechat(ios).
 
 Reference: <https://zhuanlan.zhihu.com/p/28935173>
 
-- Clean data
+Clean data
 ------------
 
 ``` r
@@ -72,7 +72,7 @@ colnames(newdata)<-"Message"
 ```
 
 Split Messages into words
--------------------------
+==========================
 
 In this section, you need to download some **Thesaurus** like `四十万汉语大词库续一.scel`. The effect of this process depends on your **Thesaurus**. So, try more **Thesaurus** and adjust them with `insertWords` until you get a reasonable result.
 
@@ -86,7 +86,7 @@ words.list<-unlist(lapply(newdata, segmentCN)[[1]])
 ```
 
 Remove stopwords
-----------------
+================
 
 Similar with splitting messages into words, you will need some stopwords list as something like reference to tell the computer which words should be removed.
 
@@ -127,7 +127,7 @@ total<-t[complete.cases(t),]
 ```
 
 Sorting words
--------------
+=============
 
 ``` r
 # Sorting my words 
@@ -137,7 +137,7 @@ wordsdf$total<-as.character(wordsdf$total)
 ```
 
 Make a wordcloud
-----------------
+================
 
 Take the top 200 words to make a wordcloud.
 
